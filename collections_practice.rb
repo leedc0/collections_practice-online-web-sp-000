@@ -48,6 +48,7 @@ end
 
 def add_s(array)
   # array.each_with_index.collect { |element, index| element.insert(-1,"s") if index != 1 }
+  # returns false for index[1] instead of element
   array.each_with_index.collect do |element, index|
     if index != 1
       # "#{word}s"
