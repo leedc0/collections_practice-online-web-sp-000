@@ -47,6 +47,12 @@ def sum_array(array) #Benchmark 0.00064
 end
 
 def add_s(array)
-  # array.each_with_index.collect { |str, index| !str[1] = str << "s"}
-  array.each_with_index.collect { |element, index| element.insert(-1,"s") if index != 1 }
+  # array.each_with_index.collect { |element, index| element.insert(-1,"s") if index != 1 }
+  array.each_with_index.collect do |word, index|
+    if index != 1
+      "#{word}s"
+    else
+      word
+    end
+  end
 end
